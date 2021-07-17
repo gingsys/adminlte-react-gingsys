@@ -1,23 +1,7 @@
 import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 
-const Empleados = () => {
-
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.setAttribute=("prueba",`<script> $(function () {
-            $("#templeado").DataTable({
-              "responsive": true, "lengthChange": false, "autoWidth": false,
-              "buttons": ["pdf", "print"]
-            }).buttons().container().appendTo('#templeado_wrapper .col-md-6:eq(0)');      
-          });</script>`)
-         
-        document.body.appendChild(script);
-
-        return () =>{
-            document.body.removeChild(script);
-        }
-      }, [])
+const Empleados = () => {   
 
     return (
         <>

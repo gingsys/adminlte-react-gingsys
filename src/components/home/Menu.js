@@ -4,7 +4,12 @@ import { NavLink } from 'react-router-dom';
 import Mini from '../../images/logomini.png'
 
 const Menu = () => {
-    
+
+    function refresh() {
+        setTimeout(()=>{
+            window.location.reload();
+        });
+    }    
 
     return (
         <>
@@ -30,7 +35,7 @@ const Menu = () => {
                                 iNICIO
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/home/dashboard" className="nav-link">
+                                <NavLink to="/home/dashboard" className="nav-link" onClick={refresh}>
                                     <i className="nav-icon fas fa-tachometer-alt" />
                                     <p>
                                         Dashboard
@@ -41,7 +46,7 @@ const Menu = () => {
                                 MANTENIMIENTOS
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/home/empleados" className="nav-link">
+                                <NavLink to="/home/empleados" className="nav-link" onClick={refresh}>
                                     <i className="nav-icon fas fa-table" />
                                     <p>
                                         Empleados
@@ -49,7 +54,7 @@ const Menu = () => {
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/home/clientes" exact className="nav-link">
+                                <NavLink to="/home/clientes" exact className="nav-link" onClick={refresh}>
                                     <i className="nav-icon fas fa-table" />
                                     <p>
                                         Clientes
@@ -57,7 +62,7 @@ const Menu = () => {
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/home/solicitudes" className="nav-link">
+                                <NavLink to="/home/solicitudes" className="nav-link" onClick={refresh}>
                                     <i className="nav-icon fas fa-table" />
                                     <p>
                                         Solicitudes
